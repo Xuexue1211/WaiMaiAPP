@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/shopCar.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/index_1.js"></script>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	
+	<body>
+		<div class="mui-content" id="app">
+			<div class="List" >
+				<div class="mui-row" id="List1">
+					清单
+				</div>
+				<div class="mui-row" id="List2">
+					<!--<form class="mui-input-group" id="formContent">
+						<div class="mui-input-row" v-for=" js in total"> 
+							<label id="menu">{{js.caiMing}}</label>
+							<span id="Price">{{js.caiPrice}}</span> 
+							<div class="mui-numbox" data-numbox-min='0'>
+								<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+								<input class="mui-input-numbox" type="number" value="1" />
+								<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+							</div>
+						</div>
+					</form>-->
+				</div>
+				<div class="mui-row" id="List3">
+					合计：&nbsp; &yen; <span id="account">0</span>元
+				</div>
+			</div>
+			<div class="connect">
+				<form class="mui-input-group">
+					<div class="mui-input-row connectName">
+						<label>联系方式</label>
+					</div>
+					<div class="mui-input-row1" id="name">
+						<label>姓名</label>
+						<input type="text" class="mui-input-clear" oninput="myFunction()" placeholder="请输入姓名" id="bk1">
+					</div>
+					<div class="mui-input-row1" id="phone">
+						<label>电话</label>
+						<input type="text" class="mui-input-clear" oninput="myFunction()" placeholder="请输入电话" id="bk2">
+					</div>
+					<div class="mui-input-row1" id="address">
+						<label>地址</label>
+						<input type="text" class="mui-input-clear" oninput="myFunction()" placeholder="请输入地址" id="bk3">
+					</div>
+					<div class="mui-input-row mui-radio mui-left" id="left1">
+						<label>货到付款</label>
+						<input name="radio" type="radio" checked>
+					</div>
+					<div class="mui-input-row mui-radio mui-left" id="left2">
+						<label>支付宝支付</label>
+						<input name="radio" type="radio">
+					</div>
+
+				</form>
+				<div class="mui-button-row">
+					<a>清空购物车</a>&nbsp;&nbsp;
+					<button type="button" class="mui-btn mui-btn-primary" style="background-color: #E9915A; border: none;">下单</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			//存储本地用户信息
+			function myFunction() {
+				var nameValue = document.getElementById("bk1").value;
+				localStorage.setItem("name", nameValue);
+				var phoneValue = document.getElementById("bk2").value;
+				localStorage.setItem("phone", phoneValue);
+				var addValue = document.getElementById("bk3").value;
+				localStorage.setItem("address", addValue);
+				var main = plus.webview.getWebviewById('person.html');
+				mui.fire(main, "pageflowrefresh");
+			}
+
+			window.addEventListener('newsId', function(event) {
+
+				var list2Div = document.getElementById("List2");
+				var formDom = document.createElement("form");
+				formDom.className = "mui-input-group";
+				var str = "";
+				str += "<div class='mui-input-row'>"
+				str += "<label id='menu'></label>";
+				str += "<span id='Price'></span> ";
+				str += "	<div class='mui-numbox' data-numbox-min='0'>";
+				str += "<button class='mui-btn mui-btn-numbox-minus' data-numbox-step='1' type='button'>-</button>";
+				str += "<input class='mui-input-numbox' type='number' data-value='0' value='1'  readonly='readonly'/>";
+				str += "<button class='mui-btn mui-btn-numbox-plus' type='button'>+</button>";
+				str += "</div>";
+				str += "</div>";
+
+				formDom.innerHTML = str;
+				list2Div.appendChild(formDom);
+				//初始化numbox空间
+				mui('.mui-numbox').numbox();
+				//通过设置中间变量来实现计算总价
+				checkGoods();
+
+				//even.detail获得上一页面传过来的数据  
+				var caiMing = event.detail.id[0];
+				var caiPrice = event.detail.id[1];
+				document.getElementById("menu").innerHTML = caiMing;
+				document.getElementById("Price").innerHTML = caiPrice;
+			});
+			//计算总价
+			function checkGoods() {
+				var caiNum = document.getElementsByClassName("mui-input-numbox").value;
+			}
+		</script>
+	</body>
+
+</html>

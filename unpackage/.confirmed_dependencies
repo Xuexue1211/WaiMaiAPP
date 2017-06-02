@@ -1,0 +1,127 @@
+{
+	"index_list2.html": {
+		"resources": [
+			"css/list_2.css",
+			"data/caidan.json",
+			"js/mui.js"
+		]
+	},
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"index_list1.html",
+			"fonts/iconfont.ttf",
+			"js/jquery.js",
+			"index_1.html",
+			"css/index.css",
+			"js/index.js"
+		],
+		"refer": [
+			"index_list2.html",
+			"index_list4.html",
+			"index_list1.html",
+			"index_list3.html",
+			"index_1.html",
+			"order.html",
+			"person.html",
+			"shopCar.html"
+		]
+	},
+	"index_list4.html": {
+		"resources": [
+			"css/wode.css",
+			"css/mui.css"
+		],
+		"refer": [
+			"map.html"
+		]
+	},
+	"index_list1.html": {
+		"resources": [
+			"img/2.jpg",
+			"css/list_1.css",
+			"img/1.jpg",
+			"img/4.jpg",
+			"js/index_1.js",
+			"img/3.jpg",
+			"img/5.jpg",
+			"img/6.jpg",
+			"img/8.jpg",
+			"img/9.jpg",
+			"img/14.jpg",
+			"img/15.jpg",
+			"img/11.jpg",
+			"data/caidan.json",
+			"img/13.jpg",
+			"img/12.jpg",
+			"img/7.jpg",
+			"img/10.jpg"
+		]
+	},
+	"map.html": {
+		"resources": [
+			"css/map.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"index_1.html": {
+		"resources": [
+			"img/14.jpg",
+			"css/index_1.css",
+			"img/9.jpg",
+			"img/15.jpg",
+			"img/11.jpg",
+			"data/caidan.json",
+			"img/4.jpg",
+			"img/13.jpg",
+			"img/5.jpg",
+			"img/12.jpg",
+			"img/2.jpg",
+			"img/7.jpg",
+			"img/8.jpg",
+			"img/1.jpg",
+			"img/6.jpg",
+			"js/index_1.js",
+			"img/10.jpg",
+			"img/3.jpg",
+			"js/shopCar.js",
+			"js/vue.min.js",
+			"js/mui.js",
+			"css/mui.min.css"
+		]
+	},
+	"order.html": {
+		"resources": [
+			"css/order.css"
+		]
+	},
+	"person.html": {
+		"resources": [
+			"css/person.css",
+			"css/mui.css",
+			"js/vue.js",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"js/vue.min.js"
+		],
+		"refer": [
+			"map.html"
+		]
+	},
+	"shopCar.html": {
+		"resources": [
+			"css/shopCar.css",
+			"js/vue.js",
+			"data/caidan.json",
+			"js/vue.min.js",
+			"js/mui.js"
+		]
+	}
+}

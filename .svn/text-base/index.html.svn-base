@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			mui.init({  
+				subpages: [{
+					url: "index_1.html", 
+					id: "index_1.html",
+					styles: {
+						top: "45px",
+						bottom: "50px"
+					}
+				}]
+			})
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-color: #35B3E4;">
+			<h1 class="mui-title" style="color: white;font-weight: bold;font-family: '微软雅黑';">外卖</h1>
+		</header>
+
+		<!--底部--> 
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="index_1.html">
+				<span class="mui-icon mui-icon mui-icon-bars"></span>
+				<span class="mui-tab-label">菜单</span>
+			</a> 
+			<a class="mui-tab-item cd-cart-trigger" href="shopCar.html">
+				<span class="mui-icon iconfont icon-gouwuche"></span>
+				<span class="mui-tab-label">
+					购物车
+						<!--<ul class="count">
+							<li>0</li>
+							<li>0</li>
+						</ul>-->
+						
+				</span>
+			</a>
+			<a class="mui-tab-item" href="order.html">
+				<span class="mui-icon iconfont icon-dingdan"></span>
+				<span class="mui-tab-label">订单</span>
+			</a>
+			<a class="mui-tab-item" href="person.html">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+	</body>     
+	<script type="text/javascript">
+		var subPages = ['index_1.html', 'shopCar.html', 'order.html', 'person.html'];
+		var subPagesStyle = {
+			top: '45px',
+			bottom: '50px'
+		}
+		mui.plusReady(function() { 
+		 	var self = plus.webview.currentWebview();
+			for(var i = 0; i < subPages.length; i++) {
+				var sub = plus.webview.create(subPages[i], subPages[i], subPagesStyle);
+				sub.hide(); 
+				self.append(sub);
+			}
+			plus.webview.show(subPages[0]);
+		})
+		mui(".mui-bar-tab").on("tap", "a", function(e) {
+			var taggPageId = this.getAttribute("href");
+			plus.webview.show(taggPageId);
+		})
+	</script>
+
+</html>

@@ -1,0 +1,110 @@
+#List1{
+	height: 40px;
+	width: 100%;
+	padding-left:7%;
+	line-height: 40px;
+	color: #35B3E4;
+	background-color: #FFFFFF;
+}
+#List2{
+	margin-top: 1px;
+	/*height: 50px;*/
+	height: 100%;
+	width: 100%;
+	padding-left:5%;
+	color: gray;
+	background-color: #FFFFFF;
+}
+#List2 form{
+	min-height: 40px;
+	width: 100%;
+}
+#List3{
+	margin-top: 1px;
+	height: 40px;
+	width: 100%;
+	padding-left: 60%;
+	line-height: 40px;
+	background-color: #FFFFFF;
+}
+.connect{
+	margin-top: 5%;
+}
+.connectName label{
+	color:  #35B3E4;
+}
+.mui-input-row1{
+	margin-top: 10px;
+}
+label{
+	color: #5b5b5b;
+	margin-left: 5%;
+	font-family: "微软雅黑";
+}
+#bk1,#bk2,#bk3{
+	border: 1px solid #eeeeee;
+	height: 35px;
+	width: 70%;
+	margin-left: 20px;
+	border-radius: 5px;
+}
+
+.bd{
+	margin-top: 5px;
+}
+#an{
+	background: #e9915a;
+	margin-right: 10%;
+	float: right;
+	margin-top: 10px;
+	color: white;
+	font-family: "微软雅黑";
+	text-align: center;
+}
+.xd{
+	margin-top: 20px;
+	height: 50px;
+	border-top: 1px solid #EEEEEE;
+}
+#word{
+	margin-left: 50%;
+	line-height: 50px;
+	float: left;
+	font-size: 14px;
+	color: #78c4ef;
+}
+.connect form{
+	/*height: 200px;*/
+	height: 100%;
+}
+.mui-button-row{
+	margin-top: 1px;
+	height: 45px;
+	background-color: white;
+}
+.mui-button-row a{
+	height: 45px;
+	line-height: 35px;
+	font-size: 15px;
+	color: #35B3E4;
+}
+.mui-input-row{
+	line-height: 40px;
+}
+.mui-numbox [class*=btn-numbox], .mui-numbox [class*=numbox-btn]{
+	background-color: #35B3E4;
+	color: white;
+	border-radius: 5px;
+}
+.mui-numbox{
+	border: none;
+}
+.mui-input-numbox{
+	border: none;
+}
+#menu{
+	font-family: "微软雅黑";
+	margin-left: 0px;
+	padding-left: 2px;
+	width: 45%;
+}

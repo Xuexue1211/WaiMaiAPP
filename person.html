@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/mui.css" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/person.css" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<form id="form" class="mui-input-group">
+				<div class="mui-input-row connectName">
+					<label>默认联系方式</label>
+				</div>
+				<div class="mui-input-row1">
+					<label>姓名</label>
+					<input type="text" class="mui-input-clear"  placeholder="请输入姓名" id="name" />
+				</div>
+				<div class="mui-input-row1">
+					<label>电话</label> 
+					<input type="text" class="mui-input-clear" placeholder="请输入电话" id="phone">
+				</div>
+				<div class="mui-input-row1">
+					<label>地址</label>
+					<input type="text" class="mui-input-clear" placeholder="请输入地址" id="address">&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="mui-icon iconfont icon-dingwei" ><span id="map">定位</span></a>
+				</div>
+			</form>
+			<div id="save">
+				<input type="button" id="saveMsg" value="保存用户信息">
+			</div>
+		</div>
+	</body>
+	<script>
+//		function myFunction() {
+//				var nameValue = document.getElementById("bk1").value;
+//				localStorage.setItem("name", nameValue);
+//
+//				var phoneValue = document.getElementById("bk2").value;
+//				localStorage.setItem("phone", phoneValue);
+//
+//				var addValue = document.getElementById("bk3").value;
+//				localStorage.setItem("address", addValue);
+//
+//				var main = plus.webview.getWebviewById('person.html');
+//				mui.fire(main, "pageflowrefresh");
+//			}
+		window.onload = function() {
+			//获取联系人信息
+			var Name = localStorage.getItem("name");
+			document.getElementById("name").value = Name;
+			var Phone = localStorage.getItem("phone");
+			document.getElementById("phone").value = Phone;
+
+			var Address = localStorage.getItem("address");
+			document.getElementById("address").value = Address;
+
+		}
+		window.addEventListener("pageflowrefresh", function(e) {
+			window.location.reload();
+		});
+
+		mui.plusReady(function() {
+			console.log("当前页面URL：" + plus.webview.currentWebview().getURL());
+		});
+		//tap为mui封装的单击事件，可参考手势事件章节
+		document.getElementById('map').addEventListener('tap', function() {
+			//打开关于页面
+			mui.openWindow({
+				url: 'map.html',
+				id: 'map'
+			});
+		});
+	</script>
+
+</html>

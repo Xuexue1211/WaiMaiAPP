@@ -1,0 +1,18 @@
+.mui-table-view .mui-media-object{
+	line-height: 60px;
+	max-width: 100px;
+	height: 70px;
+	border-radius: 10px;
+}
+.mui-table-view-chevron .mui-table-view-cell{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.mui-table-view{
+	padding-left: 10px;
+}
+#cai{
+	float: right;
+	padding-right: 10%;
+}

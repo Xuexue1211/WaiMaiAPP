@@ -1,0 +1,83 @@
+.mui-content form{
+	height: 200px;
+}
+.connectName label{
+	font-size: 15px;
+	color:  #35B3E4;
+}
+.mui-input-row1{
+	margin-top: 10px;
+
+}
+label{
+	color: #5b5b5b;
+	margin-left: 5%;
+	font-family: "微软雅黑";
+}
+#name,#phone{
+	border: 1px solid #eeeeee;
+	height: 35px;
+	width: 70%;
+	margin-left: 20px;
+	border-radius: 5px;
+}
+
+.bd{
+	margin-top: 5px;
+}
+#an{
+	background: #e9915a;
+	margin-right: 10%;
+	float: right;
+	margin-top: 10px;
+	color: white;
+	font-family: "微软雅黑";
+	text-align: center;
+}
+.xd{
+	margin-top: 20px;
+	height: 50px;
+	border-top: 1px solid #EEEEEE;
+}
+#word{
+	margin-left: 50%;
+	line-height: 50px;
+	float: left;
+	font-size: 14px;
+	color: #78c4ef;
+}
+
+.mui-button-row{
+	margin-top: 1px;
+	height: 45px;
+	background-color: white;
+}
+.mui-button-row a{
+	height: 45px;
+	line-height: 35px;
+	font-size: 15px;
+	color: #35B3E4;
+}
+#address{
+	border: 1px solid #eeeeee;
+	height: 35px;
+	width: 45%;
+	margin-left: 20px;
+	border-radius: 5px;
+}
+#save{
+	margin-top: 1px;
+	height: 50px;
+	width: 100%;
+	background-color: white;
+}
+#save input{
+	float: right;
+	right: 20%;
+	top: 7px;
+	background-color: #73A839;
+	color: white;
+}
+.mui-input-row1 h1{
+	text-align: center;
+}

@@ -1,0 +1,71 @@
+
+ .count {
+ 	/* number of items indicator */
+ 	list-style:none;
+ 	position: absolute;
+ 	top: -23px;
+ 	left: 38%;
+ 	height: 28px;
+ 	width: 28px;
+ 	height: 28px;
+ 	/*border: 1px solid red;*/
+ 	/*background: #e94b35;*/
+ 	color: gray;
+ 	font-size: 1.5rem;
+ 	font-weight: bold;
+ 	border-radius: 50%;
+ 	text-indent: 0;
+ 	-webkit-transition: -webkit-transform .2s .5s;
+ 	transition: -webkit-transform .2s .5s;
+ 	transition: transform .2s .5s;
+ 	transition: transform .2s .5s, -webkit-transform .2s .5s;
+ }
+ 
+ .count li {
+ 	/* this is the number of items in the cart */
+ 	position: absolute;
+ 	-webkit-transform: translateZ(0);
+ 	transform: translateZ(0);
+ 	left: 50%;
+ 	top: 50%;
+ 	bottom: auto;
+ 	right: auto;
+ 	-webkit-transform: translateX(-50%) translateY(-50%);
+ 	-ms-transform: translateX(-50%) translateY(-50%);
+ 	transform: translateX(-50%) translateY(-50%);
+ }
+ 
+ .count li:last-of-type {
+ 	visibility: hidden;
+ }
+ 
+ .count.update-count li:last-of-type {
+ 	-webkit-animation: cd-qty-enter .15s;
+ 	animation: cd-qty-enter .15s;
+ 	-webkit-animation-direction: forwards;
+ 	animation-direction: forwards;
+ }
+ 
+ .count.update-count li:first-of-type {
+ 	-webkit-animation: cd-qty-leave .15s;
+ 	animation: cd-qty-leave .15s;
+ 	-webkit-animation-direction: forwards;
+ 	animation-direction: forwards;
+ }
+ 
+ .count {
+ 	-webkit-transition: -webkit-transform .2s 0s;
+ 	transition: -webkit-transform .2s 0s;
+ 	transition: transform .2s 0s;
+ 	transition: transform .2s 0s, -webkit-transform .2s 0s;
+ 	-webkit-transform: scale(0);
+ 	-ms-transform: scale(0);
+ 	transform: scale(0);
+ }
+ 
+ .count {
+ 	/* fix bug - when cart is empty, do not animate count */
+ 	-webkit-transform: scale(1);
+ 	-ms-transform: scale(1);
+ 	transform: scale(1);
+ }
